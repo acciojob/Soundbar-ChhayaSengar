@@ -1,17 +1,16 @@
 //your JS code here. If required.
 let audio;
 
-function playSound(filename) {
-  stopSound(); // Stop any currently playing sounds
+function playSound(src) {
+	
 
-  audio = new Audio("sounds/" + filename);
+  audio.src = src; 
   audio.play();
 }
 
 function stopSound() {
-  if (audio) {
     audio.pause();
-    audio.currentTime = 0;
-  }
+    // audio.currentTime = 0;
+  
 }
 
